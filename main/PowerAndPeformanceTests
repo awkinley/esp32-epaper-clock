@@ -1,0 +1,62 @@
+Power and performance tests: 
+
+Experimental development board power consumption (with red led powered)
+	Deep sleep waiting on timer: 12mA
+	Deep sleep waiting on timer with epaper display connected : 12 - 13mA
+	Constatnly running with display switching: 44 - 54mA 
+	With wifi running: up to 160mA with wifi going
+	After startup with deep sleep implemented: 12mA
+	light sleep: 13mA
+
+Time to refresh time: 
+
+White -> Black -> White clear and Full reset and init process: 
+elapsed time is: 3313118 microseconds
+elapsed time is: 3320006 microseconds
+elapsed time is: 3320117 microseconds
+elapsed time is: 3319673 microseconds
+elapsed time is: 3320022 microseconds
+elapsed time is: 3320006 microseconds
+elapsed time is: 3320006 microseconds
+elapsed time is: 3320089 microseconds
+elapsed time is: 3319939 microseconds
+elapsed time is: 3320022 microseconds
+
+3313118, 3320006, 3320117, 3319673, 3320022, 3320006, 3320006, 3320089, 3319939, 3320022
+mean = 3319299.8 uS
+std dev = 2175.42996 uS
+
+
+White -> Black -> White clear and just reset: 
+elapsed time is: 3313132 microseconds
+elapsed time is: 3320014 microseconds
+elapsed time is: 3320347 microseconds
+elapsed time is: 3319899 microseconds
+elapsed time is: 3320010 microseconds
+elapsed time is: 3320014 microseconds
+elapsed time is: 3320018 microseconds
+elapsed time is: 3320097 microseconds
+elapsed time is: 3319927 microseconds
+elapsed time is: 3320010 microseconds
+
+3313132, 3320014, 3320347, 3319899, 3320010, 3320014, 3320018, 3320097, 3319927, 3320010
+mean = 3319346.8 uS
+std dev = 2187.05753 uS
+
+Full refresh LUT and just reset: 
+elapsed time is: 2472667 microseconds
+elapsed time is: 2480136 microseconds
+elapsed time is: 2479708 microseconds
+elapsed time is: 2480025 microseconds
+elapsed time is: 2480025 microseconds
+elapsed time is: 2480025 microseconds
+elapsed time is: 2480108 microseconds
+elapsed time is: 2479940 microseconds
+elapsed time is: 2480025 microseconds
+elapsed time is: 2480025 microseconds
+
+2472667, 2480136, 2479708, 2480025, 2480025, 2480025, 2480108, 2479940, 2480025, 2480025
+mean = 2479268.4 uS
+std dev = 2322.41858 uS
+
+draws ~50mA during process
